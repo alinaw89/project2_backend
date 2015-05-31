@@ -2,7 +2,6 @@ class CreateMakeupProducts < ActiveRecord::Migration
   def change
     create_table :makeup_products do |t|
       t.text :picture
-      t.string :category
       t.string :name
       t.string :brand
       t.string :color

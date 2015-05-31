@@ -3,3 +3,4 @@ class MakeupProduct < ActiveRecord::Base
   belongs_to :user
 end
 
+
