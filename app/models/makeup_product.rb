@@ -1,6 +1,11 @@
 class MakeupProduct < ActiveRecord::Base
-  has_and_belongs_to_many :categories
   belongs_to :user
+  belongs_to :category
 end
 
 
+# 1.user
+# 2.category
+# 3. makeup product
+
+# 1.drop, create, migrate (users, categories, makeup product)
