@@ -11,3 +11,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# github to ignore env file
+.env
