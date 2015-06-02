@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
-  # root 'makeup_products#index'
-   # get '/makeup_products' => 'makeup_products#index'
+  # root 'cosmetic_products#index'
+   # get '/cosmetic_products' => 'cosmetic_products#index'
 
    # get '/users' => 'users#index'
 
-resources :makeup_products, except: [:new, :edit] do
+resources :cosmetic_products, except: [:new, :edit] do
 
   end
 

@@ -1,4 +1,4 @@
 class User < ActiveRecord::Base
-  has_many :makeup_products
+  has_many :cosmetic_products
 end
 

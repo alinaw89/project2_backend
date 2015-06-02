@@ -1,5 +1,6 @@
 class Category < ActiveRecord::Base
-  has_many :makeup_products
-  #belongs_to :make_product
+  has_many :cosmetic_products
+  #belongs_to :cosmetic_product
 end
+
 

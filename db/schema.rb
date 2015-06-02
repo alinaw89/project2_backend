@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20150601215927) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "makeup_products", force: :cascade do |t|
+  create_table "cosmetic_products", force: :cascade do |t|
     t.string   "name"
     t.string   "brand"
     t.string   "color"
@@ -38,8 +38,8 @@ ActiveRecord::Schema.define(version: 20150601215927) do
     t.datetime "image_updated_at"
   end
 
-  add_index "makeup_products", ["category_id"], name: "index_makeup_products_on_category_id", using: :btree
-  add_index "makeup_products", ["user_id"], name: "index_makeup_products_on_user_id", using: :btree
+  add_index "cosmetic_products", ["category_id"], name: "index_cosmetic_products_on_category_id", using: :btree
+  add_index "cosmetic_products", ["user_id"], name: "index_cosmetic_products_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -48,6 +48,6 @@ ActiveRecord::Schema.define(version: 20150601215927) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "makeup_products", "categories"
-  add_foreign_key "makeup_products", "users"
+  add_foreign_key "cosmetic_products", "categories"
+  add_foreign_key "cosmetic_products", "users"
 end

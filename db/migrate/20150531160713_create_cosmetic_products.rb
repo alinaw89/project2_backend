@@ -1,6 +1,6 @@
-class CreateMakeupProducts < ActiveRecord::Migration
+class CreateCosmeticProducts < ActiveRecord::Migration
   def change
-    create_table :makeup_products do |t|
+    create_table :cosmetic_products do |t|
       t.string :name
       t.string :brand
       t.string :color

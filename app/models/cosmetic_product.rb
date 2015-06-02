@@ -1,4 +1,4 @@
-class MakeupProduct < ActiveRecord::Base
+class CosmeticProduct < ActiveRecord::Base
   belongs_to :user
   belongs_to :category
 
