@@ -13,5 +13,8 @@ resources :users, except: [:new, :edit] do
 
   end
 
+resources :categories, except: [:new, :edit] do
+end
+
 end
 
