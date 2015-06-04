@@ -1,7 +1,7 @@
 class CategorySerializer < ActiveModel::Serializer
-  attributes :name, :cosmetic_product_count
+  attributes :id, :name, :cosmetic_product_count
 
-  has_many:cosmetic_products
+  has_many :cosmetic_products
 
 
   def cosmetic_product_count

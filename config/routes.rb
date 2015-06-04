@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
    # get '/users' => 'users#index'
 
+post '/login' => 'auth#login'
+post '/register' => 'auth#register'
+
 resources :cosmetic_products, except: [:new, :edit] do
 
   end
