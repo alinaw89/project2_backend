@@ -11,7 +11,7 @@
 
 
 
-nawal = User.create!(name: "Nawal", email: "ali.naw89@gmail.com")
+nawal = User.create!(name: "Nawal", email: "ali.naw89@gmail.com", password_digest: 'abc123', password_confirmation: nil)
 
 # courtney = User.create!(name: "Courtney", email:"courtneysadusky@gmail.com")
 

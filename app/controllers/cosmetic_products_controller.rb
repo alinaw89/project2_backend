@@ -38,7 +38,7 @@ end
 
   private
   def cosmetic_product_params
-    params.require(:cosmetic_product).permit(:picture, :name, :brand, :color, :price, :purchase_date, :category_id, :image)
+    params.permit(:picture, :name, :brand, :color, :price, :purchase_date, :category_id, :image)
   end
 end
 
