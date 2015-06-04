@@ -21,6 +21,6 @@ end
 private
 
 def login_params
-    params.require(:credentials).permit(:email, :password)
+    params.require(:credentials).permit(:name, :email, :password)
   end
 end
