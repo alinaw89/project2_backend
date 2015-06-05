@@ -1,4 +1,4 @@
-class CosmeticProductsController < ApplicationController
+class CosmeticProductsController < ProtectedController
 
   #GET /cosmetic_products
   def index

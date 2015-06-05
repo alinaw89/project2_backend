@@ -1,4 +1,4 @@
-class CategoriesController < ApplicationController
+class CategoriesController < ProtectedController
 
   def index
     @categories = Category.all

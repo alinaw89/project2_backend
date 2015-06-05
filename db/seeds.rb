@@ -18,7 +18,7 @@
 @target = Rack::Test::UploadedFile.new(Rails.root + 'pic9.jpg', 'image/jpg')
 
 
-nawal = User.create!(name: "Nawal", email: "ali.naw89@gmail.com", password_digest: 'abc123', password_confirmation: nil)
+nawal = User.create!(name: "Nawal", email: "ali.naw89@gmail.com", password: 'abc123', password_confirmation: nil)
 
 # courtney = User.create!(name: "Courtney", email:"courtneysadusky@gmail.com")
 

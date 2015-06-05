@@ -6,6 +6,10 @@ class User < ActiveRecord::Base
   after_find :fix_up_token
   validates :email, uniqueness: true
 
+  def logout
+    new_token
+  end
+
  def authenticate_with_new_token(password)
     authenticate_without_new_token(password) && new_token
  end
@@ -21,7 +25,7 @@ class User < ActiveRecord::Base
 
  # unconditionally create and set a new token
  def new_token
-    update_columns(token: set_token)
+    update_columns(token: set_token, updated_at: Time.current)
  end
 
  # expire old token

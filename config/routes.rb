@@ -5,19 +5,20 @@ Rails.application.routes.draw do
 
    # get '/users' => 'users#index'
 
-post '/login' => 'auth#login'
-post '/register' => 'auth#register'
+   post '/login' => 'auth#login'
+   post '/register' => 'auth#register'
+   delete '/logout' => 'auth#logout'
 
-resources :cosmetic_products, except: [:new, :edit] do
+   resources :cosmetic_products, except: [:new, :edit] do
 
-  end
+   end
 
-resources :users, except: [:new, :edit] do
+   resources :users, except: [:new, :edit] do
 
-  end
+   end
 
-resources :categories, except: [:new, :edit] do
-end
+   resources :categories, except: [:new, :edit] do
+   end
 
-end
+ end
 

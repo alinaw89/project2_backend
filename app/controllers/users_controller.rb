@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class UsersController < ProtectedController
 
    #GET /user
   def index
