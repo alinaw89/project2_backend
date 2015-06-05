@@ -8,3 +8,4 @@ class OpenReadController < ProtectedController
     action == :show || action == :index
   end
 end
+
