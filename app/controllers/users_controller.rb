@@ -22,6 +22,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      head :no_content
+    else
+      render json: @user.errors, status: :unprocessable_entity
+  end
+
   def destroy
     @user_product = User.find(params[:id])
     @user.destroy
@@ -32,7 +40,7 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user)
-      .permit(:name, :email)
+      .permit(:name, :email, :password)
   end
 
 

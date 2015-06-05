@@ -3,7 +3,7 @@ class AuthController < ApplicationController
     credentials = login_params
     user = User.find_by email: credentials[:email]
     if user && user.authenticate(credentials[:password])
-      render json: { token: user.token}
+      render json: { token: user.token, id: user.id, name: user.name}
     else
       head :bad_request
     end
