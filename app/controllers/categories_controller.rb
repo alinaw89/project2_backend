@@ -8,7 +8,8 @@ class CategoriesController < ProtectedController
 
 
   def show
-    @category = Category.find(params[:id])
+      @category = current_user.cosmetic_products.where(category_id: params[:id])
+    # @category = Category.find(params[:id]) GO BACK TO THIS IF NEEDED
 
     render json: @category
   end
