@@ -19,10 +19,12 @@
 @el = Rack::Test::UploadedFile.new(Rails.root + 'pic7.jpg', 'image/jpg')
 @mor = Rack::Test::UploadedFile.new(Rails.root + 'pic8.jpg', 'image/jpg')
 @target = Rack::Test::UploadedFile.new(Rails.root + 'pic9.jpg', 'image/jpg')
+@clinque = Rack::Test::UploadedFile.new(Rails.root + 'pic10.jpg', 'image/jpg')
+@marc = Rack::Test::UploadedFile.new(Rails.root + 'pic11.jpg', 'image/jpg')
 
 
 nawal = User.create!(name: "Nawal", email: "nawal@gmail.com", password: 'nawal', password_confirmation: nil)
-amy = User.create!(name: "Amy", email: "amy@gmail.com", password: 'amy', password_confirmation: nil)
+lisa = User.create!(name: "Lisa", email: "lisa@gmail.com", password: 'lisa', password_confirmation: nil)
 
 
 
@@ -44,5 +46,7 @@ CosmeticProduct.create!(name: "Moroccan Oil Treatment", brand: "Moroccan Oil", c
 
 CosmeticProduct.create!(name: "Up & Up Body Oil", brand: "Target", color: "none", price: 7.99, purchase_date: "04/20/2015", user: nawal, category: Category.find_by_name('body'), image: @target)
 
+CosmeticProduct.create!(name: "Take The Day Off Cleansing Oil", brand: "Clinque", color: "none", price: 27, purchase_date: "04/24/2015", user: lisa, category: Category.find_by_name('face'), image: @clinque)
 
-CosmeticProduct.create!(name: "Up & Up Body Oil", brand: "Target", color: "none", price: 7.99, purchase_date: "04/20/2015", user: amy, category: Category.find_by_name('body'), image: @target)
+CosmeticProduct.create!(name: "Daisy Fragrance", brand: "Marc Jacobs", color: "none", price: 135, purchase_date: "02/05/2014", user: lisa, category: Category.find_by_name('body'), image: @marc)
+
