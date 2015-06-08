@@ -23,11 +23,11 @@ module BackEnd
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
-        allow do
-            origins '*'
-            resource '*', :headers => :any, :methods => [:get, :post, :put, :patch, :delete, :options]
-        end
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :put, :patch, :delete, :options]
+      end
     end
   end
 end
