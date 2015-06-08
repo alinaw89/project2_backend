@@ -1,4 +1,5 @@
 # Everything except AuthController should inherit from this
+#required if users have to log in to do stuff in application
 class ProtectedController < ApplicationController
   before_action :authenticate
 

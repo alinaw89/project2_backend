@@ -19,3 +19,4 @@ class CosmeticProduct < ActiveRecord::Base
 end
 
 
+

@@ -1,9 +1,11 @@
 class AuthController < ProtectedController
+  #
   skip_before_action :authenticate, if: :unauthenticated?
 
 
   def login
     credentials = login_params
+    #finds user by the email
     user = User.find_by email: credentials[:email]
     if user && user.authenticate(credentials[:password])
       render json: { token: user.token, id: user.id, name: user.name}

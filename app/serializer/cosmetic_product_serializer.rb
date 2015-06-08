@@ -6,6 +6,7 @@ def photo
 end
 
 def category_name
+  #if the category of the object is true (eyes, lips, face, etc), set it to that, if not, set it to empty string
   object.category ? object.category.name : ""
 end
 

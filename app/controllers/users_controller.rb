@@ -2,7 +2,7 @@ class UsersController < ProtectedController
 
    #GET /user
   def index
-    # all the user products
+    # get all of the users
     @users = User.all
     render json: @users
   end
@@ -14,6 +14,7 @@ class UsersController < ProtectedController
   end
 
   def create
+    # create a new user by passing in name, email, password
     @user = User.new(user_params)
     if @user.save
       render json: @user, status: :created, location: users_url
@@ -23,6 +24,7 @@ class UsersController < ProtectedController
   end
 
   def update
+    # update a user
     @user = User.find(params[:id])
     if @user.update(user_params)
       head :no_content
@@ -31,6 +33,7 @@ class UsersController < ProtectedController
   end
 
   def destroy
+    # delete a user
     @user_product = User.find(params[:id])
     @user.destroy
 
