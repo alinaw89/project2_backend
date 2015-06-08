@@ -30,6 +30,7 @@ class UsersController < ProtectedController
       head :no_content
     else
       render json: @user.errors, status: :unprocessable_entity
+    end
   end
 
   def destroy
