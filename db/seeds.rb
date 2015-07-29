@@ -28,7 +28,7 @@ lisa = User.create!(name: "Lisa", email: "lisa@gmail.com", password: 'lisa', pas
 
 
 
-CosmeticProduct.create!(name: "stila Stay All Day Waterproof Eyeliner", brand: "stila", color: "Jet Black", price: 20, purchase_date: "11/20/2014", user: nawal, category: Category.find_by_name('eyes'), image: @stila)
+CosmeticProduct.create!(name: "Stila Stay All Day Waterproof Eyeliner", brand: "stila", color: "Jet Black", price: 20, purchase_date: "11/20/2014", user: nawal, category: Category.find_by_name('eyes'), image: @stila)
 
 CosmeticProduct.create!(name: "Diorshow Waterproof Mascara", brand: "Dior", color: "Catwalk Black", price: 25, purchase_date: "08/14/2014", user: nawal, category: Category.find_by_name('eyes'), image: @dior)
 
