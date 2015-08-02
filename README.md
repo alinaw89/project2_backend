@@ -1,8 +1,8 @@
-# COMPACT - Back End
+# myCompact - Back End
 
 
-##ABOUT
-COMPACT is a rails app that allows users to track inventory of their cosmetic items. Users can upload items and view them in their virtual cosmetic bag.
+##About
+myCompact is a rails app that allows users to track inventory of their cosmetic items. Users can upload items and view them in their virtual cosmetic bag.
 
 The app can be viewed at http://alinaw89.github.io/project2_frontend/#
 
