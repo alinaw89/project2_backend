@@ -3,7 +3,7 @@ class CategorySerializer < ActiveModel::Serializer
 
   has_many :cosmetic_products
 
-  # virtual attribute to get product count
+  #virtual attribute to get product count
   def cosmetic_product_count
     object.cosmetic_products.count
   end

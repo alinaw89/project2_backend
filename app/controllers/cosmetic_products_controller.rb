@@ -18,8 +18,8 @@ class CosmeticProductsController < ProtectedController
       render json: @cosmetic_product, status: :created, location: cosmetic_products_url
     else
       render json: @cosmetic_product.errors, status: :unprocessable_entity
+    end
   end
-end
 
 
   def update

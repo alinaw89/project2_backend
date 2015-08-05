@@ -47,5 +47,4 @@ class UsersController < ProtectedController
       .permit(:name, :email, :password)
   end
 
-
 end

@@ -10,29 +10,29 @@ class User < ActiveRecord::Base
     new_token
   end
 
- def authenticate_with_new_token(password)
+  def authenticate_with_new_token(password)
     authenticate_without_new_token(password) && new_token
- end
+  end
 
- alias_method_chain :authenticate, :new_token
+  alias_method_chain :authenticate, :new_token
 
- private
+  private
 
- # FIXME: Validate that token doesn't exist? (improbable)
- def set_token
+  # FIXME: Validate that token doesn't exist? (improbable)
+  def set_token
     self.token = SecureRandom.hex(16)
- end
+  end
 
- # unconditionally create and set a new token
- def new_token
+  # unconditionally create and set a new token
+  def new_token
     update_columns(token: set_token, updated_at: Time.current)
- end
+  end
 
- # expire old token
- def fix_up_token
-    # FIXME: token age should be configurable
+  # expire old token
+  def fix_up_token
+  # FIXME: token age should be configurable
     new_token if updated_at < 1.day.ago
- end
+  end
 
 end
 
